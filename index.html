@@ -1,11 +1,117 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contoh Web Bootstrap</title>
+    <!-- Link CSS Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .nav-link {
+            position: relative;
+            transition: color 0.3s ease;
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 0;
+            left: 0;
+            background-color: white;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        .navbar-brand {
+            transition: transform 0.3s ease;
+        }
+        
+        .navbar-brand:hover {
+            transform: scale(1.05);
+        }
+
+        #home {
+            min-height: 100vh;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
 </head>
+
 <body>
-  
+    <!-- Hero Section with Navbar -->
+    <section style="background-image: url(image-65-1024x768-transformed.png); background-size: cover;" id="home">
+        <!-- Navbar -->
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+                <a class="navbar-brand text-white" href="#">Simpang Lima Gumul Kediri</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#home">Home</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#about">Tentang</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white" href="#contact">Kontak</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+        <!-- Hero Content -->
+        <div class="container text-white text-center py-5">
+            <h1>Selamat Datanng di Kota Kediri</h1>
+            <p class="lead">Ini adalah contoh sederhana menggunakan Bootstrap 5</p>
+            <a href="#about" class="btn btn-light btn-lg mt-3">Pelajari Lebih Lanjut</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="py-5">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6">
+                    <img src="Monumen_Simpang_Lima_Gumul.jpg" class="img-fluid rounded" alt="About">
+                </div>
+                <div class="col-md-6">
+                    <h2>Simpang Lima Gumul Kediri</h2>
+                    <p>
+                        Website ini dibuat menggunakan framework CSS Bootstrap untuk mempercepat pembuatan dan desain
+                        tampilan yang menarik serta responsif.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="bg-light py-5">
+        <div class="container text-center">
+            <h2>Kontak Kami</h2>
+            <p>Silakan hubungi kami melalui email di bawah ini:</p>
+            <a href="mailto:example@email.com" class="btn btn-primary">Email Kami</a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">© 2024 Website Saya. Semua Hak Dilindungi.</p>
+    </footer>
+
+    <!-- Script JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
+
 </html>
