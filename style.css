@@ -48,9 +48,19 @@ body {
 }
 
 .nav-link {
+    border-radius: 5px 5px 0px 0px;
     position: relative;
+    font-weight: 600;
     padding: 0.5rem 1rem !important;
     margin: 0 0.25rem;
+}
+
+.nav-link:hover{
+    text-shadow: 2px 2px rgb(0, 0, 0);
+    border-radius: 5px 5px 0px 0px;
+    color:rgb(255, 255, 255);
+    background-color: #2b85de;
+    transition: border 5s ease;
 }
 
 .nav-link::after {
