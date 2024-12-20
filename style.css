@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('image/gumulkediri.jpg') no-repeat center center fixed;
+    background: url('/image/gumulkediri.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #343a40;
     overflow-x: hidden;
@@ -11,7 +11,7 @@ body {
 .hero-section {
     position: relative;
     background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('image/hero-background.jpg') no-repeat center center;
+                url('/image/hero-background.jpg') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
     display: flex;
@@ -48,19 +48,9 @@ body {
 }
 
 .nav-link {
-    border-radius: 5px 5px 0px 0px;
     position: relative;
-    font-weight: 600;
     padding: 0.5rem 1rem !important;
     margin: 0 0.25rem;
-}
-
-.nav-link:hover{
-    text-shadow: 2px 2px rgb(0, 0, 0);
-    border-radius: 5px 5px 0px 0px;
-    color:rgb(255, 255, 255);
-    background-color: #2b85de;
-    transition: border 5s ease;
 }
 
 .nav-link::after {
@@ -671,5 +661,24 @@ h2 {
 
 .footer-links a:hover {
     color: #0d6efd;
+}
+
+body {
+    overflow-x: hidden; /* Menghindari scroll horizontal */
+}
+
+.container-fluid {
+    padding-left: 15px; /* Padding kiri */
+    padding-right: 15px; /* Padding kanan */
+}
+
+.row {
+    margin-right: 0; /* Menghapus margin kanan */
+    margin-left: 0; /* Menghapus margin kiri */
+}
+
+.col-lg-4, .col-lg-6 {
+    padding-left: 15px; /* Padding kiri untuk kolom */
+    padding-right: 15px; /* Padding kanan untuk kolom */
 }
 
