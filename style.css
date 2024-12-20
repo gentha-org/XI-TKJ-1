@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('/image/gumulkediri.jpg') no-repeat center center fixed;
+    background: url('image/gumulkediri.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #343a40;
     overflow-x: hidden;
