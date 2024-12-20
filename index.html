@@ -1,0 +1,546 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simpang Lima Gumul</title>
+    <!-- Link CSS Bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+
+    <!-- Link jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body onload="window.location.hash = '';">
+    <!-- Hero Section with Navbar -->
+    <section
+      class="hero-section justify-content-center align-items-center"
+      id="home"
+    >
+      <!-- Navbar -->
+      <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+          <a class="navbar-brand" href="#" data-aos="fade-right">
+            <i class="bi bi-building"></i>SLG
+          </a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item" data-aos="fade-down" data-aos-delay="100">
+                <a class="nav-link active" href="#home">
+                  <i class="bi bi-house-door"></i> Home
+                </a>
+              </li>
+              <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                <a class="nav-link" href="#about">
+                  <i class="bi bi-info-circle"></i> About
+                </a>
+              </li>
+              <li class="nav-item" data-aos="fade-down" data-aos-delay="200">
+                <a class="nav-link" href="#Galeri">
+                  <i class="bi bi-card-image"></i> Galery
+                </a>
+              </li>
+              <li class="nav-item" data-aos="fade-down" data-aos-delay="300">
+                <a class="nav-link" href="#contact">
+                  <i class="bi bi-envelope"></i> Contact
+                </a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+      <!-- Hero Content -->
+      <div class="hero-content justify-content-center">
+        <div class="container">
+          <div class="row min-vh-100 align-items-center">
+            <div class="" data-aos="fade-right" data-aos-delay="300">
+              <h1
+                class="display-4 fw-bold text-white mb-4 animate__animated animate__fadeInDown"
+              >
+                Selamat Datang di<br />Simpang Lima Gumul
+              </h1>
+              <p
+                class="lead text-white mb-4 animate__animated animate__fadeInUp"
+              >
+                Ikon Kebanggaan Kota Kediri yang Megah dan Bersejarah
+              </p>
+              <div
+                class="animate__animated animate__fadeInUp animate__delay-1s"
+              >
+                <a href="#about" class="btn btn-light btn-lg me-2 rounded-pill">
+                  <i class="bi bi-arrow-down-circle"></i> Jelajahi
+                </a>
+                <a
+                  href="#contact"
+                  class="btn btn-outline-light btn-lg rounded-pill animate__animated animate__fadeInUp animate__delay-1s animate__slow"
+                >
+                  <i class="bi bi-envelope pt-3"></i> Hubungi Kami
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section py-5">
+      <div class="container">
+        <div class="title text-center mb-4">
+          <h6 class="text-primary fw-bold mb-3" data-aos="fade-down" data-aos-delay="200">TENTANG KAMI</h6>
+          <h2 class="display-5 fw-bold">Simpang Lima Gumul Kediri</h2>
+        </div>
+        <div class="row align-items-center">
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="position-relative z-3">
+              <img
+                src="image/tamanijo (1).jpg"
+                class="img-fluid rounded-3 shadow-lg"
+                alt="Simpang Lima Gumul"
+              />
+              <div class="about-overlay">
+                <span class="badge bg-primary px-3 py-2">Landmark Kediri</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="200">
+            <p class="lead mb-4">
+              Simpang Lima Gumul adalah monumen megah yang menjadi kebanggaan Kota Kediri, menggabungkan arsitektur modern dengan nilai sejarah yang kental. 
+              Tempat ini tidak hanya menjadi simbol kebanggaan, tetapi juga destinasi wisata yang menarik bagi pengunjung dari berbagai daerah.
+            </p>
+            <p class="lead mb-4">
+              Dengan berbagai fasilitas yang tersedia, pengunjung dapat menikmati keindahan arsitektur, taman yang asri, serta area kuliner yang menggugah selera. 
+              Simpang Lima Gumul juga sering menjadi lokasi berbagai acara budaya dan festival, menjadikannya pusat kegiatan masyarakat.
+            </p>
+            <a href="#fasilitas" class="btn btn-primary mt-3">Jelajahi Fasilitas Kami</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Fasilitas Section -->
+    <section id="fasilitas" class="fasilitas-section py-5">
+      <div class="container">
+        <h2 class="text-center mb-5 fw-bold text-white" data-aos="fade-down">
+          Fasilitas & <span class="text-info">Galeri</span>
+        </h2>
+
+        <!-- Fasilitas Cards -->
+        <div class="cards-container" data-aos="fade-up">
+          <button class="card-nav prev-card">❮</button>
+          <div class="cards-wrapper gap-5">
+            <!-- Card 1 -->
+            <div
+              class="facility-card"
+              data-aos="fade-left"
+              data-aos-delay="100"
+            >
+              <div class="card h-100">
+                <img
+                  src="image/Monumen_Simpang_Lima_Gumul.jpg"
+                  class="card-img-top"
+                  alt="Monumen SLG"
+                />
+                <div class="card-body">
+                  <h5 class="card-title pt-3 text-center" data-aos="fade-up">
+                    Klik untuk detail
+                  </h5>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="facility-card"
+              data-aos="fade-left"
+              data-aos-delay="200"
+            >
+              <div class="card h-100">
+                <img
+                  src="image/Monumen_Simpang_Lima_Gumul.jpg"
+                  class="card-img-top"
+                  alt="Taman"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Taman Rekreasi</h5>
+                  <p class="card-text">
+                    Area taman yang asri untuk bersantai dan berekreasi bersama
+                    keluarga.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="facility-card"
+              data-aos="fade-left"
+              data-aos-delay="300"
+            >
+              <div class="card h-100">
+                <img
+                  src="image/Monumen_Simpang_Lima_Gumul.jpg"
+                  class="card-img-top"
+                  alt="Amphitheater"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Amphitheater</h5>
+                  <p class="card-text">
+                    Tempat pertunjukan outdoor yang dapat menampung ribuan
+                    pengunjung untuk berbagai acara.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="facility-card"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <div class="card h-100">
+                <img
+                  src="image/Monumen_Simpang_Lima_Gumul.jpg"
+                  class="card-img-top"
+                  alt="Area Kuliner"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Area Kuliner</h5>
+                  <p class="card-text">
+                    Berbagai pilihan kuliner lokal dan modern tersedia untuk
+                    memanjakan selera pengunjung.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div
+              class="facility-card"
+              data-aos="fade-left"
+              data-aos-delay="500"
+            >
+              <div class="card h-100">
+                <img
+                  src="image/Monumen_Simpang_Lima_Gumul.jpg"
+                  class="card-img-top"
+                  alt="Area Parkir"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Area Parkir</h5>
+                  <p class="card-text">
+                    Tersedia area parkir yang luas dan aman untuk kendaraan
+                    pengunjung.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div
+              class="facility-card"
+              data-aos="fade-left"
+              data-aos-delay="600"
+            >
+              <div class="card h-100">
+                <img
+                  src="image/Monumen_Simpang_Lima_Gumul.jpg"
+                  class="card-img-top"
+                  alt="Pusat Oleh-oleh"
+                />
+                <div class="card-body">
+                  <h5 class="card-title">Pusat Oleh-oleh</h5>
+                  <p class="card-text">
+                    Temukan berbagai produk khas Kediri untuk oleh-oleh dan
+                    cinderamata.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="card-nav next-card position-left" onclick="shiftCardsManually(1)">
+            ❯
+          </button>
+        </div>
+
+        <!-- Gallery Section -->
+        <div id="Galeri" class="gallery-section mt-5" data-aos="fade-up">
+          <h3 class="text-center mb-4 text-white">Galeri Foto</h3>
+          <div class="slideshow-container">
+            <div class="slides">
+              <img
+                src="image/Monumen_Simpang_Lima_Gumul.jpg"
+                style="width: 100%"
+              />
+              <div class="text"><strong>Monumen SLG</strong></div>
+            </div>
+
+            <div class="slides">
+              <img
+                src="image/image-65-1024x768-transformed.png"
+                style="width: 100%"
+              />
+              <div class="text"><strong>Taman Rekreasi</strong></div>
+            </div>
+
+            <div class="slides">
+              <img
+                src="image/bima-putra-muryawan-RQ5NCGvMmfw-unsplash.jpg"
+                style="width: 100%"
+              />
+              <div class="text"><strong>Amphitheater</strong></div>
+            </div>
+
+            <div class="slides">
+              <img
+                src="image/mahmur-marganti-ckxb3Jp0WnQ-unsplash.jpg"
+                style="width: 100%"
+              />
+              <div class="text"><strong>Area Kuliner</strong></div>
+            </div>
+
+            <button class="prev" onclick="plusSlides(-1)">❮</button>
+            <button class="next" onclick="plusSlides(1)">❯</button>
+          </div>
+
+          <div class="dot-container" style="text-align: center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+            <span class="dot" onclick="currentSlide(4)"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section py-5">
+      <div class="container">
+        <div class="row">
+          <!-- Google Maps iframe -->
+          <div class="col-lg-6 mb-4 mb-lg-0" data-aos="fade-right">
+            <div class="maps-container shadow-sm rounded">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7905.485400264913!2d112.05500964037056!3d-7.817036968814353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78590013b2be75%3A0xf5af952fea3521cf!2sSimpang%20Lima%20Gumul!5e0!3m2!1sid!2sid!4v1734446102371!5m2!1sid!2sid"
+                width="100%"
+                height="450"
+                style="border: 0"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade"
+              >
+              </iframe>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="col-lg-6" data-aos="fae-left">
+            <div class="card shadow-lg border-0">
+              <div class="card-body p-4">
+                <h2 class="text-center mb-4">Hubungi Kami</h2>
+                <form id="contactForm">
+                  <div class="row g-4">
+                    <div
+                      class="col-md-6"
+                      data-aos="fade-right"
+                      data-aos-delay="100"
+                    >
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="name"
+                          placeholder="Nama Lengkap"
+                        />
+                        <label for="name"
+                          ><i class="bi bi-person"></i> Nama Lengkap</label
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="col-md-6"
+                      data-aos="fade-left"
+                      data-aos-delay="200"
+                    >
+                      <div class="form-floating mb-3">
+                        <input
+                          type="email"
+                          class="form-control"
+                          id="email"
+                          placeholder="Email"
+                        />
+                        <label for="email"
+                          ><i class="bi bi-envelope"></i> Email</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12" data-aos="fade-up" data-aos-delay="300">
+                      <div class="form-floating mb-3">
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="subject"
+                          placeholder="Subjek"
+                        />
+                        <label for="subject"
+                          ><i class="bi bi-chat-left-text"></i> Subjek</label
+                        >
+                      </div>
+                    </div>
+                    <div class="col-12" data-aos="fade-up" data-aos-delay="400">
+                      <div class="form-floating mb-3">
+                        <textarea
+                          class="form-control"
+                          id="message"
+                          style="height: 150px"
+                          placeholder="Pesan"
+                        ></textarea>
+                        <label for="message"
+                          ><i class="bi bi-pencil"></i> Pesan</label
+                        >
+                      </div>
+                    </div>
+                    <div
+                      class="col-12 text-center"
+                      data-aos="fade-up"
+                      data-aos-delay="500"
+                    >
+                      <button type="submit" class="btn btn-primary btn-lg px-5">
+                        <i class="bi bi-send"></i> Kirim Pesan
+                      </button>
+                    </div>
+                  </div>
+                </form>
+              </div>
+            </div>
+
+            <!-- Info Kontak -->
+            <div class="row mt-4 g-3">
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                  <div class="card-body">
+                    <i class="bi bi-geo-alt text-primary display-6"></i>
+                    <h6 class="mt-2">Alamat</h6>
+                    <small
+                      >Tugurejo, Kec. Ngasem, Kabupaten Kediri, Jawa Timur
+                      64182</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                  <div class="card-body">
+                    <i class="bi bi-telephone text-primary display-6"></i>
+                    <h6 class="mt-2">Telepon</h6>
+                    <small>(0354) 691776</small>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+                <div class="card h-100 border-0 shadow-sm text-center">
+                  <div class="card-body">
+                    <i class="bi bi-envelope text-primary display-6"></i>
+                    <h6 class="mt-2">Email</h6>
+                    <small>disparbud@kedirikab.go.id</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer bg-dark text-white py-5">
+      <div class="container">
+        <div class="row text-center g-4">
+          <!-- Brand Column -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up">
+            <h5 class="fw-bold mb-3">
+              <i class="bi bi-building"></i> Simpang Lima Gumul
+            </h5>
+            <p class="text-white">
+              Jelajahi keagungan arsitektur modern yang menyatu dengan warisan
+              sejarah di Simpang Lima Gumul. Nikmati pengalaman wisata tak
+              terlupakan dengan pemandangan spektakuler, taman yang asri, dan
+              berbagai aktivitas menarik untuk seluruh keluarga.
+            </p>
+            <div class="social-links">
+              <a href="https://facebook.com/disparbudkedirikab" class="text-white me-3"><i class="bi bi-facebook"></i></a>
+              <a href="https://instagram.com/disparbudkedirikab" class="text-white me-3"><i class="bi bi-instagram"></i></a>
+              <a href="https://twitter.com/disparbudkedirikab" class="text-white me-3"><i class="bi bi-twitter"></i></a>
+              <a href="https://youtube.com/@disparbudkedirikab" class="text-white"><i class="bi bi-youtube"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="col-lg-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+            <h5 class="fw-bold mb-3">Quick Links</h5>
+            <ul class="list-unstyled footer-links">
+              <li><a href="#home" class="text-decoration-none text-white"><i class="bi bi-chevron-right"></i> Home</a></li>
+              <li><a href="#about" class="text-decoration-none text-white"><i class="bi bi-chevron-right"></i> About</a></li>
+              <li><a href="#fasilitas" class="text-decoration-none text-white"><i class="bi bi-chevron-right"></i> Fasilitas & Galery</a></li>
+              <li><a href="#contact" class="text-decoration-none text-white"><i class="bi bi-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <h5 class="fw-bold mb-3">Informasi Kontak</h5>
+            <div class="contact-info">
+              <p class="text-white mb-2"><i class="bi bi-geo-alt me-2"></i> Jl. Erlangga No. 1 Kediri</p>
+              <p class="text-white mb-2"><i class="bi bi-telephone me-2"></i> 	(0354) 691776</p>
+              <p class="text-white mb-2"><i class="bi bi-envelope me-2"></i> disparbud@kedirikab.go.id</p>
+              <p class="text-white mb-2"><i class="bi bi-clock me-2"></i> Senin - Jumat: 08.00 - 16.00 WIB</p>
+              <p class="text-white"><i class="bi bi-globe me-2"></i> kedirikab.go.id/disparbud</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Copyright -->
+        <div class="text-center border-top border-secondary mt-4 pt-4">
+          <p class="mb-0 text-white">© 2024 Simpang Lima Gumul Kediri. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script JS Bootstrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+    <!-- Tambahan Script -->
+    <script src="main.js"></script>
+  </body>
+</html>
