@@ -1,7 +1,7 @@
 /* Global Styles */
 body {
     font-family: 'Arial', sans-serif;
-    background: url('/image/gumulkediri.jpg') no-repeat center center fixed;
+    background-image: url('/image/gumulkediri.jpg') no-repeat center center fixed;
     background-size: cover;
     color: #343a40;
     overflow-x: hidden;
@@ -10,7 +10,7 @@ body {
 
 .hero-section {
     position: relative;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
                 url('/image/hero-background.jpg') no-repeat center center;
     background-size: cover;
     min-height: 100vh;
