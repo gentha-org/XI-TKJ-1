@@ -1,684 +1,796 @@
-/* Global Styles */
+/*  Global Styles */
+html {
+  overflow-x: hidden;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
-    background-image: url('image/gumulkediri.jpg') no-repeat center center fixed;
-    background-size: cover;
-    color: #343a40;
-    overflow-x: hidden;
-    width: 100%;
+  font-family: "Arial", sans-serif;
+  background-image: url("image/keith-misner-h0Vxgz5tyXA-unsplash.jpg");
+  position: absolute;
+  background-size: cover;
+  overflow-x: hidden;
+  width: 100%;
+  overflow-x: hidden;
 }
 
-.hero-section {
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
-                url('image/hero-background.jpg') no-repeat center center;
-    background-size: cover;
-    min-height: 100vh;
-    display: flex;
-    align-items: center;
-    width: 100%;
-    overflow: hidden;
-    color: white;
+.main h1 {
+  font-size: 3.5rem;
+  color: #ffffff;
 }
 
-.hero-content {
-    width: 100%;
-    padding: 0 15px;
+.main a {
+  background-color: #602c08;
+  border: none;
 }
 
 @keyframes fadeIn {
-    from { opacity: 0; }
-    to { opacity: 1; }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 .navbar {
-    background: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    transition: all 0.3s ease;
+  background: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
 }
 
 .navbar.scrolled {
-    background: rgba(0, 0, 0, 0.9);
-    backdrop-filter: blur(10px);
+  background: rgba(0, 0, 0, 0.9);
+  backdrop-filter: blur(10px);
 }
 
 .navbar-brand {
-    font-weight: 700;
-    font-size: 1.5rem;
+  font-weight: 700;
+  font-size: 1.5rem;
 }
 
 .nav-link {
-    position: relative;
-    padding: 0.5rem 1rem !important;
-    margin: 0 0.25rem;
+  position: relative;
+  padding: 0.5rem 1rem !important;
+  margin: 0 0.25rem;
 }
 
 .nav-link::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 2px;
-    background: #fff;
-    transition: width 0.3s ease;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background: #fff;
+  transition: width 0.3s ease;
 }
 
 .nav-link:hover::after {
-    width: 100%;
+  width: 100%;
+}
+
+/* Hero Section Styles */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .btn-light {
-    background-color: #f8f9fa;
-    border: none;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  background-color: #f8f9fa;
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .btn-light:hover {
-    background-color: #e2e6ea;
-    transform: scale(1.05);
-}
-
-.opeen {
-    display: none;
-    transition: all 0.5s ease;
-    border-radius: 20px;
-    margin-top: 10px;
-}
-
-.opeen.open {
-    display: block;
-    opacity: 1;
-    height: 250px;
-    width: 250px;
-}
-
-.opeen.close {
-    opacity: 0;
-    height: 0;
-    width: 0;
+  background-color: #e2e6ea;
+  transform: scale(1.05);
 }
 
 .about-section {
-    background-color: #f8f9fa;
-    padding: 60px 0;
+  background-color: #f8f9fa;
+  padding: 60px 0;
 }
 
 .about-section .title h2 {
-    font-size: 2.5rem;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
 .about-overlay {
-    position: absolute;
-    bottom: 10px;
-    left: 10px;
-    z-index: 10;
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  z-index: 10;
 }
 
 .about-overlay .badge {
-    font-size: 1rem;
-    padding: 10px 15px;
+  font-size: 1rem;
+  padding: 10px 15px;
 }
 
 .lead {
-    font-size: 1.1rem;
-    line-height: 1.6;
+  font-size: 1.1rem;
+  line-height: 1.6;
 }
 
 .about-section img {
-    transition: transform 0.5s ease;
+  transition: transform 0.5s ease;
 }
 
 .about-section img:hover {
-    transform: scale(1.03);
+  transform: scale(1.03);
 }
 
 .about-section .bi {
-    font-size: 1.2rem;
+  font-size: 1.2rem;
+}
+
+/* fasilitas hover card */
+.mobile-text {
+  display: none;
+}
+.laptop-text {
+  display: none;
+}
+
+/* Untuk layar dengan lebar maksimum 768px (mobile) */
+@media (max-width: 768px) {
+  .mobile-text {
+    display: block;
+  }
+}
+
+/* Untuk layar dengan lebar di atas 768px (laptop/desktop) */
+@media (min-width: 769px) {
+  .laptop-text {
+    display: block;
+  }
 }
 
 /* slide galery*/
 .slideshow-container {
-    max-width: 1000px;
-    position: relative;
-    margin: auto;
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
 }
 
 .slides {
-    display: none;
+  display: none;
 }
 
 .prev,
 .next {
-    text-decoration: none;
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: #0e83b1;
-    font-weight: bold;
-    font-size: 20px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0;
-    user-select: none;
+  text-decoration: none;
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: #0e83b1;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
 }
 
 .next {
-    right: 0;
-    border-radius: 3px 0 0 3px;
+  right: 0;
+  border-radius: 3px 0 0 3px;
 }
 
 .prev:hover,
 .next:hover {
-    background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
 }
 
 .text {
-    color: #fff;
-    font-size: 25px;
-    padding: 8px 12px;
-    position: absolute;
-    bottom: 8px;
-    width: 100%;
-    text-align: center;
+  color: #fff;
+  font-size: 25px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
 }
 
 .numbertext {
-    color: #000;
-    font-size: 17px;
-    padding: 8px 12px;
-    /* position: absolute; */
-    position: relative;
-    top: 0;
+  color: #000;
+  font-size: 17px;
+  padding: 8px 12px;
+  /* position: absolute; */
+  position: relative;
+  top: 0;
 }
 
 .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
 }
 
 .active,
 .dot:hover {
-    background-color: #717171;
+  background-color: #717171;
 }
 
 .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s;
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
 }
 
 @-webkit-keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @keyframes fade {
-    from {
-        opacity: .4
-    }
-    to {
-        opacity: 1
-    }
+  from {
+    opacity: 0.4;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 footer {
-    background-color: #343a40;
-    color: white;
-    padding: 1rem 0;
-    transition: background-color 0.3s ease;
+  background-color: #343a40;
+  color: white;
+  padding: 1rem 0;
+  transition: background-color 0.3s ease;
 }
 
 footer .container {
-    max-width: 1200px;
+  max-width: 1200px;
 }
 
 footer:hover {
-    background-color: #495057;
+  background-color: #495057;
 }
 
 /* Form styling */
 .form-floating > label {
-    padding-left: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .form-floating > .form-control {
-    padding-left: 2.5rem;
+  padding-left: 2.5rem;
 }
 
 .form-control:focus {
-    border-color: #0d6efd;
-    box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+  border-color: #0d6efd;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
 }
 
 .card {
-    transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 
 .card:hover {
-    transform: translateY(-5px);
+  transform: translateY(-5px);
 }
 
 .bi {
-    margin-right: 0.5rem;
+  margin-right: 0.5rem;
 }
 
 .maps-container {
-    position: relative;
-    overflow: hidden;
-    padding-top: 100%; /* Membuat container persegi */
-    height: 100%;
-    min-height: 450px;
+  position: relative;
+  overflow: hidden;
+  padding-top: 100%;
+  height: 100%;
+  min-height: 450px;
 }
 
 .maps-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
 }
 
 .contact-section {
-    background-color: #f8f9fa;
-    padding: 2rem 0rem;
-    min-height: 100vh;
+  background-color: #f8f9fa;
+  padding: 2rem 0rem;
+  min-height: 100vh;
 }
 
 /* Menyesuaikan ukuran ikon pada info kontak */
 .card .display-6 {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 /* Membuat card info kontak lebih compact */
 .card-body {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 @media (max-width: 992px) {
-    .maps-container {
-        padding-top: 75%; /* Lebih pendek pada layar mobile */
-        min-height: 300px;
-    }
+  .maps-container {
+    padding-top: 75%;
+    min-height: 300px;
+  }
 }
 
 /* Animasi Custom */
 @keyframes float {
-    0% {
-        transform: translateY(0px);
-    }
-    50% {
-        transform: translateY(-10px);
-    }
-    100% {
-        transform: translateY(0px);
-    }
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
 }
 
 .floating {
-    animation: float 3s ease-in-out infinite;
+  animation: float 3s ease-in-out infinite;
 }
 
 /* Responsive fixes */
 @media (max-width: 992px) {
-    .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    
-    .row {
-        margin-right: 0;
-        margin-left: 0;
-    }
-    
-    .col-lg-6 {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
+  .container {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
+
+  .row {
+    margin-right: 0;
+    margin-left: 0;
+  }
+
+  .col-lg-6 {
+    padding-right: 15px;
+    padding-left: 15px;
+  }
 }
 
 /* Footer Styles */
 .footer {
-    position: relative;
-    background: linear-gradient(rgba(33, 37, 41, 0.97), rgba(33, 37, 41, 0.97));
+  position: relative;
+  background: linear-gradient(rgba(33, 37, 41, 0.97), rgba(33, 37, 41, 0.97));
 }
 
 .footer-links li {
-    margin-bottom: 5px;
-    transition: all 0.3s ease;
+  margin-bottom: 5px;
+  transition: all 0.3s ease;
 }
 
 .footer-links li:hover {
-    transform: translateX(5px);
+  transform: translateX(5px);
 }
 
 .footer-links a {
-    transition: color 0.3s ease;
+  transition: color 0.3s ease;
 }
 
 .footer-links a:hover {
-    color: #fff !important;
+  color: #fff !important;
 }
 
 .social-links a {
-    font-size: 1.5rem;
-    transition: all 0.3s ease;
+  font-size: 1.5rem;
+  transition: all 0.3s ease;
 }
 
 .social-links a:hover {
-    color: #0d6efd !important;
-    transform: translateY(-3px);
+  color: #0d6efd !important;
+  transform: translateY(-3px);
 }
 
 .footer p.text-muted {
-    opacity: 0.8;
-    transition: opacity 0.3s ease;
-    margin-bottom: 0;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+  margin-bottom: 0;
 }
 
 .footer p.text-muted:hover {
-    opacity: 1;
-}
-
-/* Fasilitas Section */
-.fasilitas-section {
-    background-color: rgba(0, 0, 0, 0.8);
-    padding: 5rem 0;
-}
-
-.card {
-    transition: all 0.3s ease;
-    border: none;
-    border-radius: 10px;
-    overflow: hidden;
-    margin-bottom: 1rem;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.card-img-top {
-    height: 200px;
-    object-fit: cover;
-}
-
-.card-body {
-    padding: 1.5rem;
-}
-
-.card-title {
-    font-weight: bold;
-    margin-bottom: 1rem;
+  opacity: 1;
 }
 
 /* Gallery Section styling */
+.position {
+  position: end;
+}
+
 .gallery-section {
-    background: rgba(0, 0, 0, 0.5);
-    padding: 2rem;
-    border-radius: 10px;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 2rem;
+  border-radius: 10px;
 }
 
 .slideshow-container {
-    max-width: 800px;
-    position: relative;
-    margin: auto;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 0 20px rgba(0,0,0,0.3);
+  max-width: 800px;
+  position: relative;
+  margin: auto;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
 }
 
 .slides {
-    display: none;
-    position: relative;
+  display: none;
+  position: relative;
 }
 
 .slides img {
-    width: 100%;
-    height: 500px;
-    object-fit: cover;
+  width: 100%;
+  height: 500px;
+  object-fit: cover;
 }
 
-.prev, .next {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 24px;
-    background: rgba(0,0,0,0.5);
-    border: none;
-    border-radius: 50%;
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: 0.3s ease;
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  background: rgba(0, 0, 0, 0.5);
+  border: none;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.3s ease;
 }
 
 .next {
-    right: 10px;
+  right: 10px;
 }
 
 .prev {
-    left: 10px;
+  left: 10px;
 }
 
-.prev:hover, .next:hover {
-    background: rgba(0,0,0,0.8);
+.prev:hover,
+.next:hover {
+  background: rgba(0, 0, 0, 0.8);
 }
 
 .text {
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    text-align: center;
-    background: rgba(0,0,0,0.7);
-    color: white;
-    padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 0;
 }
 
 .dot-container {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .dot {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 5px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: 0.3s ease;
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 5px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: 0.3s ease;
 }
 
-.active, .dot:hover {
-    background-color: #717171;
+.active,
+.dot:hover {
+  background-color: #717171;
 }
 
 @media (max-width: 768px) {
-    .slides img {
-        height: 300px;
-    }
+  .slides img {
+    height: 300px;
+  }
 }
 
 /* Responsive Adjustments */
 @media (max-width: 768px) {
-    .slides img {
-        height: 300px;
-    }
-    
-    .text {
-        font-size: 16px;
-    }
-    
-    .prev, .next {
-        padding: 0.5rem;
-    }
+  .slides img {
+    height: 300px;
+  }
+
+  .text {
+    font-size: 16px;
+  }
+
+  .prev,
+  .next {
+    padding: 0.5rem;
+  }
 }
 
 /* Fasilitas Cards Styling */
 .cards-container {
-    position: relative;
-    width: 100%;
-    max-width: 1000px;
-    margin: 0 auto;
-    padding: 0 50px;
-    overflow: hidden;
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+  overflow-x: auto;
+  white-space: nowrap;
 }
 
 .cards-wrapper {
-    display: flex;
-    gap: 20px;
-    transition: transform 0.5s ease;
+  display: inline-flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
 }
 
 .facility-card {
-    flex: 0 0 300px;
-    min-width: 300px;
+  flex: 0 0 300px;
+  min-width: 300px;
 }
 
 .card-nav {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    border-radius: 50%;
-    cursor: pointer;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .prev-card {
-    left: 0;
+  left: 0;
 }
 
 .next-card {
-    right: 0;
+  right: 0;
 }
 
 .facility-card.enlarged {
-    transform: scale(1.2);
+  transform: scale(1.2);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
-    .cards-container {
-        padding: 0 40px;
-    }
-    
-    .facility-card {
-        flex: 0 0 280px;
-        min-width: 280px;
-    }
+  .cards-container {
+    padding: 0 20px;
+  }
+
+  .facility-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+  }
 }
 
 .card {
-    transition: transform 0.3s ease; /* Transisi halus untuk transformasi */
+  transition: transform 0.3s ease;
 }
 
 .card.enlarged {
-    transform: scale(1.1); /* Ukuran saat diperbesar */
+  transform: scale(1.1);
 }
 
 .maps-container {
-    height: 250px;
+  height: 250px;
 }
 
 @media (max-width: 768px) {
-    .maps-container {
-        height: 200px;
-    }
+  .maps-container {
+    height: 200px;
+  }
 }
 
 h2 {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card {
-    margin-bottom: 1rem;
+  margin-bottom: 1rem;
 }
 
 .card-body {
-    padding: 1rem;
+  padding: 1rem;
 }
 
 .footer {
-    background-color: #343a40;
-    color: white;
+  background-color: #343a40;
+  color: white;
 }
 
 .footer .container {
-    max-width: 1200px;
+  max-width: 1200px;
 }
 
 .footer h5 {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .footer p {
-    font-size: 0.9rem;
+  font-size: 0.9rem;
 }
 
 .footer .social-links a {
-    font-size: 1.5rem;
+  font-size: 1.5rem;
 }
 
 .footer-links li {
-    margin-bottom: 5px;
+  margin-bottom: 5px;
 }
 
 .footer-links a {
-    transition: color 0.3s;
+  transition: color 0.3s;
 }
 
 .footer-links a:hover {
-    color: #0d6efd;
-}
-
-body {
-    overflow-x: hidden; /* Menghindari scroll horizontal */
+  color: #0d6efd;
 }
 
 .container-fluid {
-    padding-left: 15px; /* Padding kiri */
-    padding-right: 15px; /* Padding kanan */
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
 .row {
-    margin-right: 0; /* Menghapus margin kanan */
-    margin-left: 0; /* Menghapus margin kiri */
+  margin-right: 0;
+  margin-left: 0;
 }
 
-.col-lg-4, .col-lg-6 {
-    padding-left: 15px; /* Padding kiri untuk kolom */
-    padding-right: 15px; /* Padding kanan untuk kolom */
+.col-lg-4,
+.col-lg-6 {
+  padding-left: 15px;
+  padding-right: 15px;
 }
 
+/* Fasilitas card */
+.card-fs {
+  --background: linear-gradient(to left, #f7ba2b 0%, #ea5358 100%);
+  width: 250px;
+  height: 350px;
+  padding: 5px;
+  border-radius: 1rem;
+  overflow: visible;
+  background: #f7ba2b;
+  background: var(--background);
+  position: relative;
+  z-index: 1;
+}
+
+.card-fs::after {
+  position: absolute;
+  content: "";
+  top: 30px;
+  left: 0;
+  right: 0;
+  z-index: -1;
+  height: 100%;
+  width: 100%;
+  transform: scale(0.8);
+  filter: blur(25px);
+  background: #f7ba2b;
+  background: var(--background);
+  transition: opacity 0.5s;
+}
+
+.card-info-fs {
+  --color: #181818;
+  background: var(--color);
+  color: var(--color);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  overflow: visible;
+  border-radius: 0.7rem;
+}
+
+.card-fs .title {
+  font-weight: bold;
+  letter-spacing: 0.1em;
+}
+
+/*Hover*/
+.card-fs:hover::after {
+  opacity: 0;
+}
+
+.card-fs:hover .card-info-fs {
+  color: #f7ba2b;
+  transition: color 1s;
+}
+
+/* Responsive */
+
+.cardss-container {
+  position: relative;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 50px;
+  overflow: hidden;
+}
+
+.cardss-wrapper {
+  display: flex;
+  gap: 20px;
+  transition: transform 0.5s ease;
+}
+
+.facility-card {
+  flex: 0 0 300px;
+  min-width: 300px;
+}
+
+.cards-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.prev-card {
+  left: 0;
+}
+
+.next-card {
+  right: 0;
+}
+
+.facility-card.enlarged {
+  transform: scale(1.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cards-container {
+    padding: 0 40px;
+  }
+
+  .facility-card {
+    flex: 0 0 280px;
+    min-width: 280px;
+  }
+}
+
+.card {
+  transition: transform 0.3s ease;
+}
+
+.card.enlarged {
+  transform: scale(1.1);
+}

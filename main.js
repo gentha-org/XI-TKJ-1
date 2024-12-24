@@ -120,38 +120,33 @@ let open = document.querySelector("#open");
 $(document).ready(function () {
   $("#open").click(function () {
     const $opeen = $(".opeen");
-    
+
     if ($opeen.hasClass("open")) {
-      $opeen
-        .stop(true, true)
-        .animate(
-          {
-            left: "0px",
-            opacity: "0",
-            height: "0px",
-            width: "0px",
-          },
-          400,
-          function() {
-            $(this).removeClass("open").addClass("close").css("display", "none"); 
-          }
-        );
-      $(this).html('<i class="bi bi-chevron-right"></i> Buka'); 
+      $opeen.stop(true, true).animate(
+        {
+          left: "0px",
+          opacity: "0",
+          height: "0px",
+          width: "0px",
+        },
+        400,
+        function () {
+          $(this).removeClass("open").addClass("close").css("display", "none");
+        }
+      );
+      $(this).html('<i class="bi bi-chevron-right"></i> Buka');
     } else {
-      $opeen
-        .stop(true, true)
-        .css("display", "block") 
-        .animate(
-          {
-            left: "450px",
-            opacity: "1",
-            height: "350px",
-            width: "450px",
-          },
-          400
-        );
-      $(this).html('<i class="bi bi-chevron-left"></i> Tutup'); 
-      $opeen.removeClass("close").addClass("open"); 
+      $opeen.stop(true, true).css("display", "block").animate(
+        {
+          left: "450px",
+          opacity: "1",
+          height: "350px",
+          width: "450px",
+        },
+        400
+      );
+      $(this).html('<i class="bi bi-chevron-left"></i> Tutup');
+      $opeen.removeClass("close").addClass("open");
     }
   });
 });
