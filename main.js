@@ -1,3 +1,10 @@
+window.addEventListener('load', function () {
+  // Tunggu hingga animasi selesai sebelum menampilkan konten utama
+  setTimeout(() => {
+      document.getElementById('splash-screen').style.display = 'none';
+      document.getElementById('main-content').style.display = 'block';
+  }, 4000); // Total durasi animasi (4 detik)
+});
 // Navbar Scroll Effect
 window.addEventListener("scroll", function () {
   const navbar = document.querySelector(".navbar");

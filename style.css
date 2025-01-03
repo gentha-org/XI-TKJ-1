@@ -1,3 +1,77 @@
+/* Splash Screen */
+#splash-screen {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(135deg, #5f5d5b, rgb(0, 0, 0), #000000);
+  background-size: 300% 300%; /* Untuk efek animasi */
+  animation: backgroundShift 6s ease infinite; /* Animasi gradasi */
+  z-index: 9999;
+  animation: fadeOut 1s forwards 4s; /* Hilang setelah 4 detik */
+}
+
+/* Animasi gradasi */
+@keyframes backgroundShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Logo dan Animasi */
+.logo-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  border: 5px solid white;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+  margin-bottom: 10px;
+  background: linear-gradient(45deg, #ff9900, #ff0000);
+  box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
+}
+
+.logo {
+  font-size: 2.5rem; /* Ukuran lebih besar */
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  animation: zoomIn 1s ease-out;
+  color: white;
+  background: linear-gradient(45deg, #ffcc00, #ff0000);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.541); /* Tambahkan bayangan teks */
+}
+
+/* Tagline */
+.tagline {
+  margin-top: 10px;
+  font-size: 1.2rem; /* Sedikit lebih besar */
+  font-style: italic;
+  animation: fadeIn 2s 1.5s ease-out forwards;
+  opacity: 0;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3); /* Bayangan untuk tagline */
+}
+
+
 /*  Global Styles */
 html {
   overflow-x: hidden;
