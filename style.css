@@ -11,6 +11,7 @@
   --shadow-sm: 0 1px 2px rgba(0,0,0,0.04);
   --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.08);
   --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.12);
+  --shadow-xl: 0 15px 25px -5px rgba(0,0,0,0.1);
   --font-primary: 'Outfit', sans-serif;
   --font-heading: 'Space Grotesk', sans-serif;
   --font-opsi: 'Playwrite IN', serif;
@@ -58,27 +59,17 @@ h1, h2, h3, h4, h5, h6 {
   color: transparent;
 }
 
-/* Navbar Styles */
-.navbar {
-  background: rgba(255, 255, 255, 0.95);
-  backdrop-filter: blur(10px);
-  padding: 15px 0;
-  transition: all 0.3s ease;
-  margin: 20px;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-}
-
+/* Navbar Styles Update */
 .navbar.scrolled {
   margin: 15px;
-  padding: 12px 0;
+  padding: 15px 0;
   background: rgba(255, 255, 255, 0.98);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
 }
 
 .navbar-brand {
   padding: 8px 15px;
-  border-radius: 12px;
+  border-radius: 20px;
   transition: all 0.3s ease;
 }
 
@@ -88,23 +79,10 @@ h1, h2, h3, h4, h5, h6 {
   gap: 12px;
 }
 
-.brand-icon {
-  width: 40px;
-  height: 40px;
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: white;
-  font-size: 1.3rem;
-  transition: all 0.3s ease;
-}
-
-p .brand-text {
+.brand-text {
   font-family: var(--font-opsi);
-  font-weight: 700;
-  font-size: 1.5rem;
+  font-weight: 600;
+  font-size: 1rem;
   color: var(--text-primary);
   letter-spacing: -0.02em;
 }
@@ -192,7 +170,7 @@ p .brand-text {
   }
 }
 
-/* Hero Section */
+/* Hero Section Update */
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -207,6 +185,7 @@ p .brand-text {
 }
 
 .hero-title {
+  padding-top: 35px;
   font-size: 3.8rem;
   line-height: 1.2;
   margin-bottom: 1.5rem;
@@ -465,7 +444,7 @@ p .brand-text {
   }
 }
 
-/* Contact Section */
+/* Contact Section Styles */
 .contact-section {
   background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
   padding: 120px 0;
@@ -598,137 +577,7 @@ p .brand-text {
   transform: translateX(5px);
 }
 
-/* Maps Styles */
-.maps-wrapper {
-  border-radius: 20px;
-  overflow: hidden;
-  box-shadow: var(--shadow-lg);
-  width: 100%;
-  margin: 3rem auto;
-  max-width: 1200px;
-}
-
-.maps-container {
-  position: relative;
-  width: 100%;
-  height: 180px; /* Lebih pendek untuk desktop */
-}
-
-.maps-container iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  border: none;
-}
-
-/* Maps Animation */
-.maps-wrapper {
-  opacity: 0;
-  transform: translateY(20px);
-  animation: mapsFadeIn 0.8s ease forwards;
-}
-
-@keyframes mapsFadeIn {
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
-
-/* Responsive Maps */
-@media (max-width: 1200px) {
-  .maps-container {
-    height: 250px;
-  }
-}
-
-@media (max-width: 992px) {
-  .maps-container {
-    height: 300px;
-  }
-  
-  .maps-wrapper {
-    margin: 2rem auto;
-  }
-}
-
-@media (max-width: 768px) {
-  .maps-container {
-    height: 250px;
-  }
-}
-
-@media (max-width: 576px) {
-  .maps-container {
-    height: 200px;
-  }
-  
-  .maps-wrapper {
-    margin: 1.5rem auto;
-    border-radius: 15px;
-  }
-}
-
-/* Form Animations */
-@keyframes formFloat {
-  0%, 100% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-5px);
-  }
-}
-
-.contact-info-card {
-  animation: formFloat 3s ease-in-out infinite;
-  animation-delay: calc(var(--i) * 0.2s);
-}
-
-/* Responsive Styles */
-@media (max-width: 992px) {
-  .contact-section {
-    padding: 80px 0;
-  }
-  
-  .contact-form-wrapper {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 768px) {
-  .contact-info-card {
-    padding: 20px;
-  }
-  
-  .info-icon {
-    width: 45px;
-    height: 45px;
-    font-size: 1.1rem;
-  }
-  
-  .form-floating > .form-control {
-    font-size: 0.95rem;
-  }
-}
-
-@media (max-width: 576px) {
-  .contact-form-wrapper {
-    padding: 20px;
-  }
-  
-  .btn-submit {
-    width: 100%;
-    justify-content: center;
-  }
-  
-  .maps-container {
-    padding-top: 80%;
-  }
-}
-
-/* Footer */
+/* Footer Update */
 .footer {
   background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%);
   padding: 80px 0 0;
@@ -772,7 +621,7 @@ p .brand-text {
 }
 
 .footer-brand .brand-text {
-  font-family: var(--font-heading);
+  font-family: var(--font-opsi);
   font-size: 1.8rem;
   font-weight: 700;
   background: linear-gradient(45deg, #e2e8f0, #ffffff);
@@ -813,7 +662,7 @@ p .brand-text {
 }
 
 .footer-title {
-  font-family: var(--font-heading);
+  font-family: var(--font-opsi);
   font-size: 1.3rem;
   color: white;
   margin-bottom: 1.5rem;
@@ -998,7 +847,7 @@ p .brand-text {
   }
 }
 
-/* Card Styles */
+/* Card Styles Update */
 .card {
   border: none;
   border-radius: 20px;
@@ -1072,6 +921,7 @@ p .brand-text {
   background: var(--secondary-color);
 }
 
+
 /*  Global Styles */
 html {
   overflow-x: hidden;
@@ -1110,10 +960,10 @@ body {
 .navbar {
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(10px);
-  padding: 15px 0;
+  padding: 4px, 0;
   transition: all 0.3s ease;
-  margin: 20px;
-  border-radius: 40px;
+  margin: 12px;
+  border-radius: 30px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
 }
 
@@ -1131,9 +981,7 @@ body {
 }
 
 .brand-container {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 
 .brand-icon {
@@ -1150,11 +998,16 @@ body {
 }
 
 .brand-text {
-  font-family: var(--font-heading);
+  font-family: var(--font-opsi);
+  font-style: italic;
   font-weight: 700;
   font-size: 1.5rem;
-  color: var(--text-primary);
+  color: rgb(121, 217, 255);
   letter-spacing: -0.02em;
+}
+
+.brand-text span {
+  color: rgb(0, 165, 231);
 }
 
 .navbar-nav {
@@ -1347,8 +1200,8 @@ body {
 /* Responsive fixes */
 @media (max-width: 992px) {
   .container {
-    padding-right: 15px;
-    padding-left: 15px;
+    padding-right: 10px;
+    padding-left: 10px;
   }
 
   .row {
@@ -1807,14 +1660,14 @@ body {
   border-radius: 20px;
   overflow: hidden;
   box-shadow: var(--shadow-md);
-  transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
   height: 100%;
   position: relative;
 }
 
 .facility-card:hover {
   transform: translateY(-10px);
-  box-shadow: var(--shadow-lg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .facility-image {
@@ -1937,8 +1790,27 @@ body {
 /* Swiper Custom Styles */
 .facilitiesSwiper {
   padding: 30px 50px;
+  overflow: visible; /* Memungkinkan slide di luar container terlihat */
 }
 
+.swiper-slide {
+  transition: all 0.3s ease;
+  opacity: 0.4; /* Membuat slide non-aktif transparan */
+  transform: scale(0.8); /* Membuat slide non-aktif lebih kecil */
+}
+
+.swiper-slide-active {
+  opacity: 1; /* Slide aktif tidak transparan */
+  transform: scale(1); /* Slide aktif ukuran normal */
+}
+
+.swiper-slide-prev,
+.swiper-slide-next {
+  opacity: 0.7; /* Slide sebelah kiri dan kanan semi-transparan */
+  transform: scale(0.9); /* Slide sebelah sedikit lebih kecil */
+}
+
+/* Mengatur posisi tombol navigasi */
 .swiper-button-next,
 .swiper-button-prev {
   width: 45px;
@@ -2022,53 +1894,87 @@ body {
   }
 }
 
-/* Swiper Custom Styles */
-.facilitiesSwiper {
-  padding: 30px 50px;
+.carousel-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.swiper-button-next,
-.swiper-button-prev {
-  width: 45px;
-  height: 45px;
+.facility-card {
+  width: 300px; /* Atur lebar sesuai kebutuhan */
+  margin: 0 auto; /* Pusatkan kartu */
+}
+
+/* Facilities Section Styles */
+.facilities-section {
+  background: linear-gradient(135deg, var(--bg-light) 0%, #fff 100%);
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
+}
+
+.facilities-carousel {
+  display: flex;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  gap: 20px;
+  padding: 20px;
+  transition: transform 0.3s ease;
+}
+
+.facility-card {
+  flex: 0 0 auto;
+  scroll-snap-align: center;
   background: var(--bg-white);
-  border-radius: 50%;
+  border-radius: 20px;
+  overflow: hidden;
   box-shadow: var(--shadow-md);
-  color: var(--primary-color);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 300px;
+  position: relative;
 }
 
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 1.2rem;
-  font-weight: bold;
+.facility-card:hover {
+  transform: translateY(-10px);
+  box-shadow: var(--shadow-lg);
 }
 
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  background: linear-gradient(45deg, var(--primary-color), var(--secondary-color));
-  color: white;
-  transform: translateY(-3px);
+.facilities-carousel::-webkit-scrollbar {
+  display: none;
 }
 
-/* Responsive Navigation - Menyembunyikan tombol di mobile & tablet */
+.facilities-carousel {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Responsive Styles */
 @media (max-width: 992px) {
-  .facilitiesSwiper {
-    padding: 30px 20px;
+  .facilities-carousel {
+    gap: 15px;
   }
 
-  .swiper-button-next,
-  .swiper-button-prev {
-    display: none !important; /* Menggunakan !important untuk memastikan tombol tersembunyi */
+  .facility-card {
+    width: 250px;
   }
 }
 
 @media (max-width: 768px) {
-  .facility-content {
-    padding: 25px;
+  .facilities-carousel {
+    gap: 10px;
   }
-  
-  .facility-content p {
-    font-size: 1rem;
+
+  .facility-card {
+    width: 200px;
+  }
+}
+
+@media (max-width: 576px) {
+  .facilities-carousel {
+    gap: 5px;
+  }
+
+  .facility-card {
+    width: 150px;
   }
 }

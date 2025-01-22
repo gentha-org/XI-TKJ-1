@@ -10,21 +10,16 @@
       rel="stylesheet"
     />
     <link
-      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
-      rel="stylesheet"
-    />
-    <link
       href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
       rel="stylesheet"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
     />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css"
       rel="stylesheet"
     />
+
+    <!-- Link jQuery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 
     <!-- Link CSS -->
     <link rel="stylesheet" href="style.css" />
@@ -45,28 +40,19 @@
       rel="stylesheet"
     />
 
-    <!-- Google Fonts -->
+    <!-- google font -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+IN&family=Roboto+Slab:wght@100..900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playwrite+IN:wght@100..400&family=Roboto+Slab:wght@100..900&display=swap"
       rel="stylesheet"
     />
-    
-    <!-- jQuery -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   </head>
   <body>
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg fixed-top">
       <div class="container">
-        <a
-          class="navbar-brand animate__animated animate__fadeIn"
-          href="#"
-          data-aos="fade-right"
-        >
+        <a class="navbar-brand fade-in" href="#">
           <div class="brand-container">
             <p class="brand-text">Simpang <span>Lima</span></p>
           </div>
@@ -107,12 +93,6 @@
                 <span class="nav-text">Contact</span>
               </a>
             </li>
-            <li class="nav-item" data-aos="fade-down" data-aos-delay="500">
-              <a class="nav-link" href="#footer">
-                <span class="nav-icon"><i class="bi bi-info-square"></i></span>
-                <span class="nav-text">Information</span>
-              </a>
-            </li>
           </ul>
         </div>
       </div>
@@ -126,7 +106,7 @@
             <div class="hero-content">
               <h1 class="hero-title">
                 Discover The Beauty of
-                <span class="gradient-text">Simpang Lima</span>
+                <span class="gradient-text">Simpang Lima Gumul</span>
               </h1>
               <p class="hero-description">
                 Ikon kebanggaan Kediri dengan arsitektur megah yang memadukan
@@ -159,7 +139,7 @@
 
           <div class="col-lg-6">
             <div class="hero-image-wrapper">
-              <div class="hero-image">
+              <div class="hero-image zoom-in">
                 <img
                   src="image/taman hijau.webp"
                   alt="Simpang Lima Gumul"
@@ -187,38 +167,13 @@
       </div>
     </section>
 
-    <!-- Tambahkan section baru setelah hero section -->
-    <section id="statistics" class="statistics-section section-padding">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center mb-5">
-            <span class="section-subtitle">Statistik</span>
-            <h2 class="section-title">
-              Data Pengunjung <span class="highlight">SLG</span>
-            </h2>
-            <p class="section-description">
-              Grafik kunjungan wisatawan Simpang Lima Gumul dalam 12 bulan
-              terakhir
-            </p>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="chart-wrapper">
-              <div id="visitorChart"></div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <!-- About Section -->
     <section id="about" class="about-section section-padding">
       <div class="container">
         <div class="row align-items-center">
           <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
             <div class="hero-image-wrapper">
-              <div class="hero-image animate__animated animate__zoomIn">
+              <div class="hero-image zoom-in">
                 <img
                   src="image/taman hijau.webp"
                   alt="Simpang Lima Gumul"
@@ -287,114 +242,97 @@
     <!-- Fasilitas Section -->
     <section id="fasilitas" class="facilities-section section-padding">
       <div class="container">
-        <div class="section-header text-center" data-aos="fade-up">
-          <span class="section-subtitle">Fasilitas</span>
-          <h2 class="section-title">Fasilitas & Layanan</h2>
+        <div class="section-header text-center mb-5" data-aos="fade-up">
+          <span class="section-subtitle">Fasilitas Kami</span>
+          <h2 class="section-title">Explore Our Facilities</h2>
           <p class="section-description">
-            Nikmati berbagai fasilitas modern untuk kenyamanan pengunjung
+            Kami menyediakan berbagai fasilitas untuk kenyamanan dan pengalaman terbaik Anda.
           </p>
         </div>
 
-        <div class="facilities-slider" data-aos="fade-up">
-          <div class="swiper facilitiesSwiper">
-            <div class="swiper-wrapper">
-              <!-- Facility Card 1 -->
-              <div class="swiper-slide">
-                <div class="facility-card">
-                  <div class="facility-image">
-                    <img src="image/taman-hijau.webp" alt="Taman" />
-                    <div class="facility-overlay">
-                      <div class="overlay-content">
-                        <i class="bi bi-tree"></i>
-                        <h3>Taman Hijau</h3>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="facility-content">
-                    <div class="facility-header">
-                      <div class="facility-icon">
-                        <i class="bi bi-tree-fill"></i>
-                      </div>
-                      <h4>Taman Hijau</h4>
-                    </div>
-                    <p>
-                      Area hijau yang asri untuk bersantai dan menikmati suasana
-                      alam
-                    </p>
-                    <ul class="facility-features">
-                      <li><i class="bi bi-check-circle"></i> Area Piknik</li>
-                      <li><i class="bi bi-check-circle"></i> Jogging Track</li>
-                      <li><i class="bi bi-check-circle"></i> Taman Bermain</li>
-                    </ul>
-                  </div>
-                </div>
+        <div class="row g-4">
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="100">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="image/fasilitas1.jpg" alt="Fasilitas 1" class="img-fluid" />
               </div>
-
-              <!-- Facility Card 2 -->
-              <div class="swiper-slide">
-                <div class="facility-card">
-                  <div class="facility-image">
-                    <img src="image/taman hijau.webp" alt="Area Parkir" />
-                    <div class="facility-overlay">
-                      <i class="bi bi-p-square"></i>
-                    </div>
-                  </div>
-                  <div class="facility-content">
-                    <h3>Area Parkir</h3>
-                    <p>Parkir luas dengan kapasitas ratusan kendaraan</p>
-                    <ul class="facility-features">
-                      <li>
-                        <i class="bi bi-check2-circle"></i> Sistem parkir modern
-                      </li>
-                      <li>
-                        <i class="bi bi-check2-circle"></i> Keamanan 24 jam
-                      </li>
-                      <li><i class="bi bi-check2-circle"></i> Area teduh</li>
-                    </ul>
-                    <a href="#" class="facility-btn">
-                      Selengkapnya <i class="bi bi-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Facility Card 3 -->
-              <div class="swiper-slide">
-                <div class="facility-card">
-                  <div class="facility-image">
-                    <img src="image/taman hijau.webp" alt="Food Court" />
-                    <div class="facility-overlay">
-                      <i class="bi bi-shop"></i>
-                    </div>
-                  </div>
-                  <div class="facility-content">
-                    <h3>Food Court</h3>
-                    <p>Beragam pilihan kuliner lokal dan modern</p>
-                    <ul class="facility-features">
-                      <li>
-                        <i class="bi bi-check2-circle"></i> Menu bervariasi
-                      </li>
-                      <li>
-                        <i class="bi bi-check2-circle"></i> Area makan nyaman
-                      </li>
-                      <li>
-                        <i class="bi bi-check2-circle"></i> Harga terjangkau
-                      </li>
-                    </ul>
-                    <a href="#" class="facility-btn">
-                      Selengkapnya <i class="bi bi-arrow-right"></i>
-                    </a>
-                  </div>
-                </div>
+              <div class="facility-content">
+                <h4 class="facility-title">Ruang Pertemuan</h4>
+                <p class="facility-description">
+                  Ruang pertemuan yang nyaman dan dilengkapi dengan teknologi modern untuk mendukung acara Anda.
+                </p>
               </div>
             </div>
+          </div>
 
-            <!-- Navigation -->
-            <div class="swiper-button-next"></div>
-            <div class="swiper-button-prev"></div>
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="200">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="image/fasilitas2.jpg" alt="Fasilitas 2" class="img-fluid" />
+              </div>
+              <div class="facility-content">
+                <h4 class="facility-title">Kafe dan Restoran</h4>
+                <p class="facility-description">
+                  Nikmati berbagai hidangan lezat di kafe dan restoran kami yang nyaman.
+                </p>
+              </div>
+            </div>
+          </div>
 
-            <!-- Pagination -->
-            <div class="swiper-pagination"></div>
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="300">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="image/fasilitas3.jpg" alt="Fasilitas 3" class="img-fluid" />
+              </div>
+              <div class="facility-content">
+                <h4 class="facility-title">Area Parkir Luas</h4>
+                <p class="facility-description">
+                  Area parkir yang luas dan aman untuk kenyamanan Anda saat berkunjung.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="400">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="image/fasilitas4.jpg" alt="Fasilitas 4" class="img-fluid" />
+              </div>
+              <div class="facility-content">
+                <h4 class="facility-title">Wi-Fi Gratis</h4>
+                <p class="facility-description">
+                  Nikmati akses internet gratis di seluruh area untuk mendukung kebutuhan Anda.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="500">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="image/fasilitas5.jpg" alt="Fasilitas 5" class="img-fluid" />
+              </div>
+              <div class="facility-content">
+                <h4 class="facility-title">Taman yang Indah</h4>
+                <p class="facility-description">
+                  Taman yang asri dan indah untuk bersantai dan menikmati suasana.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 col-sm-12" data-aos="fade-up" data-aos-delay="600">
+            <div class="facility-card">
+              <div class="facility-image">
+                <img src="image/fasilitas6.jpg" alt="Fasilitas 6" class="img-fluid" />
+              </div>
+              <div class="facility-content">
+                <h4 class="facility-title">Layanan 24 Jam</h4>
+                <p class="facility-description">
+                  Layanan pelanggan yang siap membantu Anda kapan saja.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
@@ -529,9 +467,9 @@
         </div>
 
         <!-- Maps -->
-        <div class="maps-wrapper mt-5" data-aos="fade-up">
-          <div class="maps-container">
-            <iframe
+        <div  id="footer" class="mt-5" data-aos="fade-up">
+          <div>
+            <iframe id="footer-maps" width="100%" height="550px" 
               src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d7905.485400264913!2d112.05500964037056!3d-7.817036968814353!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e78590013b2be75%3A0xf5af952fea3521cf!2sSimpang%20Lima%20Gumul!5e0!3m2!1sid!2sid!4v1734446102371!5m2!1sid!2sid"
               allowfullscreen=""
               loading="lazy"
@@ -542,17 +480,14 @@
     </section>
 
     <!-- Footer Section -->
-    <footer id="footer" class="footer">
+    <footer class="footer">
       <div class="container">
         <div class="row g-4">
           <!-- Brand Column -->
-          <div class="col-lg-4" data-aos="fade-up">
+          <div class="col-lg-4 col-md-6" data-aos="fade-up">
             <div class="footer-brand">
               <div class="brand-container mb-4">
-                <div class="brand-icon">
-                  <i class="bi bi-building"></i>
-                </div>
-                <span class="brand-text">SLG</span>
+                <p class="brand-text fst-italic">Simpang <span>Lima</span></p>
               </div>
               <p class="footer-description">
                 Ikon kebanggaan Kediri yang memadukan arsitektur modern dengan
@@ -584,11 +519,12 @@
           >
             <h3 class="footer-title">Quick Links</h3>
             <ul class="footer-links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#fasilitas">Fasilitas</a></li>
-              <li><a href="#gallery">Gallery</a></li>
-              <li><a href="#contact">Contact</a></li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit.
+                Voluptatem quod distinctio modi nam rerum ullam, aliquid quas
+                alias molestias. Natus iste eum praesentium sapiente voluptatem
+                ut sit id aut sed.
+              </p>
             </ul>
           </div>
 
@@ -600,11 +536,12 @@
           >
             <h3 class="footer-title">Facilities</h3>
             <ul class="footer-links">
-              <li><a href="#parking">Parking Area</a></li>
-              <li><a href="#food">Food Court</a></li>
-              <li><a href="#garden">Garden</a></li>
-              <li><a href="#playground">Playground</a></li>
-              <li><a href="#mosque">Mosque</a></li>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Culpa
+                corporis laborum cupiditate sit! Obcaecati aspernatur voluptas
+                magnam dolor perspiciatis cumque eum, unde cum, dolores
+                cupiditate omnis a suscipit dolorem at.
+              </p>
             </ul>
           </div>
 
@@ -659,10 +596,6 @@
 
     <!-- Script JS Bootstrap -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
-    <script>
-      AOS.init();
-    </script>
     <!-- Tambahan Script -->
     <script src="main.js"></script>
   </body>
