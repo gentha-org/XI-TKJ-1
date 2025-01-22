@@ -71,11 +71,10 @@ highlights.forEach(highlight => {
 
 // Initialize Swiper
 const facilitiesSwiper = new Swiper(".facilitiesSwiper", {
-  slidesPerView: "auto",
-  centeredSlides: true,
+  slidesPerView: 1,
   spaceBetween: 30,
   loop: true,
-  speed: 800,
+  centeredSlides: true,
   autoplay: {
     delay: 3000,
     disableOnInteraction: false,
@@ -88,28 +87,45 @@ const facilitiesSwiper = new Swiper(".facilitiesSwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
+  effect: "creative",
+  creativeEffect: {
+    prev: {
+      translate: ["-120%", 0, -500],
+      rotate: [0, 0, -15],
+      opacity: 0
+    },
+    next: {
+      translate: ["120%", 0, -500],
+      rotate: [0, 0, 15],
+      opacity: 0
+    }
+  },
   breakpoints: {
     640: {
-      slidesPerView: 1.5,
-      spaceBetween: 20,
+      slidesPerView: 1,
     },
     768: {
-      slidesPerView: 2.2,
+      slidesPerView: 2,
       spaceBetween: 30,
     },
     1024: {
-      slidesPerView: 2.5,
+      slidesPerView: 3,
       spaceBetween: 30,
     },
   },
-  on: {
-    init: function () {
-      setTimeout(() => {
-        this.update();
-      }, 100);
-    },
-  },
 });
+
+// Initialize AOS
+AOS.init({
+  duration: 800,
+  easing: 'ease-in-out',
+  once: true,
+  mirror: false
+});
+
+// Pastikan tombol navigasi selalu aktif
+document.querySelector('.nav-prev').style.display = 'flex';
+document.querySelector('.nav-next').style.display = 'flex';
 
 // Smooth Scroll with jQuery
 $(document).ready(function() {
@@ -146,72 +162,6 @@ $(document).ready(function() {
       }
     });
   });
-
-  // Immediately show initial animations
-  setTimeout(function() {
-    $('.nav-item').addClass('active');
-    $('.fade-in, .fade-right, .fade-left, .zoom-in').addClass('active');
-  }, 100);
-
-  // Function to check if element is in viewport
-  function isInViewport(element) {
-    const rect = element.getBoundingClientRect();
-    return (
-      rect.top <= (window.innerHeight || document.documentElement.clientHeight) &&
-      rect.bottom >= 0
-    );
-  }
-
-  // Function to handle scroll animations
-  function handleScrollAnimations() {
-    $('.scroll-fade-in, .scroll-fade-right, .scroll-fade-left, .scroll-zoom-in, .section-animate').each(function() {
-      if (isInViewport(this)) {
-        $(this).addClass('active');
-      }
-    });
-  }
-
-  // Run on page load
-  handleScrollAnimations();
-
-  // Run on scroll with throttle
-  let scrollTimeout;
-  $(window).on('scroll', function() {
-    if (!scrollTimeout) {
-      scrollTimeout = setTimeout(function() {
-        handleScrollAnimations();
-        scrollTimeout = null;
-      }, 50);
-    }
-  });
-
-  // Run on resize with debounce
-  let resizeTimeout;
-  $(window).on('resize', function() {
-    clearTimeout(resizeTimeout);
-    resizeTimeout = setTimeout(handleScrollAnimations, 250);
-  });
-
-  // Inisialisasi Bootstrap Carousel
-  $('#facilitiesCarousel').carousel({
-    interval: 3000, // Waktu antara slide
-    pause: "hover" // Menghentikan slide saat hover
-  });
-
-  // Tambahkan animasi saat slide berpindah
-  $('#facilitiesCarousel').on('slide.bs.carousel', function () {
-    $('.carousel-item').removeClass('animate__animated animate__fadeIn');
-    $('.carousel-item.active').addClass('animate__animated animate__fadeIn');
-  });
-
-  // Tambahkan event listener untuk tombol next dan prev
-  $('.carousel-control-prev').click(function() {
-    $('#facilitiesCarousel').carousel('prev');
-  });
-
-  $('.carousel-control-next').click(function() {
-    $('#facilitiesCarousel').carousel('next');
-  });
 });
 
 // Add active state for navigation buttons
@@ -237,54 +187,126 @@ document.querySelectorAll('.facility-card').forEach(card => {
   });
 });
 
-// Initialize Facilities Carousel
-const facilitiesCarousel = document.querySelector('.facilities-carousel');
-let isDown = false;
-let startX;
-let scrollLeft;
+// Data Pengunjung Chart
+document.addEventListener('DOMContentLoaded', function() {
+  // Data pengunjung (contoh data)
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const visitors = [1200, 1350, 1500, 1800, 2100, 2400, 2800, 3000, 2700, 2500, 2300, 2600];
+  const onlineTickets = [800, 950, 1100, 1300, 1600, 1900, 2200, 2400, 2100, 1900, 1700, 2000];
 
-facilitiesCarousel.addEventListener('mousedown', (e) => {
-  isDown = true;
-  facilitiesCarousel.classList.add('active');
-  startX = e.pageX - facilitiesCarousel.offsetLeft;
-  scrollLeft = facilitiesCarousel.scrollLeft;
-});
+  // Konfigurasi tema custom
+  const customTheme = {
+    font: {
+      family: 'Outfit, sans-serif',
+      size: 14,
+      color: '#475569'
+    },
+    paper_bgcolor: 'rgba(255,255,255,0)',
+    plot_bgcolor: 'rgba(255,255,255,0)',
+    colorway: ['#6366f1', '#818cf8']
+  };
 
-facilitiesCarousel.addEventListener('mouseleave', () => {
-  isDown = false;
-  facilitiesCarousel.classList.remove('active');
-});
-
-facilitiesCarousel.addEventListener('mouseup', () => {
-  isDown = false;
-  facilitiesCarousel.classList.remove('active');
-});
-
-facilitiesCarousel.addEventListener('mousemove', (e) => {
-  if (!isDown) return;
-  e.preventDefault();
-  const x = e.pageX - facilitiesCarousel.offsetLeft;
-  const walk = (x - startX) * 3; //scroll-fast
-  facilitiesCarousel.scrollLeft = scrollLeft - walk;
-});
-
-// Auto scroll for carousel
-let autoScrollInterval;
-
-const startAutoScroll = () => {
-  autoScrollInterval = setInterval(() => {
-    facilitiesCarousel.scrollLeft += 1;
-    if (facilitiesCarousel.scrollLeft + facilitiesCarousel.clientWidth >= facilitiesCarousel.scrollWidth) {
-      facilitiesCarousel.scrollLeft = 0;
+  // Data untuk grafik
+  const trace1 = {
+    x: months,
+    y: visitors,
+    name: 'Total Pengunjung',
+    type: 'scatter',
+    mode: 'lines+markers',
+    line: {
+      width: 3,
+      shape: 'spline'
+    },
+    marker: {
+      size: 8,
+      symbol: 'circle'
     }
-  }, 20);
-};
+  };
 
-const stopAutoScroll = () => {
-  clearInterval(autoScrollInterval);
-};
+  const trace2 = {
+    x: months,
+    y: onlineTickets,
+    name: 'Tiket Online',
+    type: 'scatter',
+    mode: 'lines+markers',
+    line: {
+      width: 3,
+      shape: 'spline'
+    },
+    marker: {
+      size: 8,
+      symbol: 'circle'
+    }
+  };
 
-facilitiesCarousel.addEventListener('mouseenter', stopAutoScroll);
-facilitiesCarousel.addEventListener('mouseleave', startAutoScroll);
+  // Layout konfigurasi
+  const layout = {
+    title: {
+      text: 'Statistik Pengunjung 2023',
+      font: {
+        size: 24,
+        family: 'Space Grotesk, sans-serif',
+        color: '#0f172a'
+      }
+    },
+    showlegend: true,
+    legend: {
+      orientation: 'h',
+      y: -0.2
+    },
+    margin: {
+      l: 50,
+      r: 30,
+      t: 80,
+      b: 80
+    },
+    xaxis: {
+      showgrid: true,
+      gridcolor: '#e2e8f0',
+      gridwidth: 1,
+      tickfont: {
+        family: 'Outfit, sans-serif'
+      }
+    },
+    yaxis: {
+      showgrid: true,
+      gridcolor: '#e2e8f0',
+      gridwidth: 1,
+      tickfont: {
+        family: 'Outfit, sans-serif'
+      },
+      title: {
+        text: 'Jumlah Pengunjung',
+        font: {
+          family: 'Outfit, sans-serif',
+          size: 14
+        }
+      }
+    },
+    hovermode: 'x unified',
+    hoverlabel: {
+      bgcolor: '#fff',
+      font: {
+        family: 'Outfit, sans-serif'
+      },
+      bordercolor: '#e2e8f0'
+    }
+  };
 
-startAutoScroll();
+  // Konfigurasi responsif
+  const config = {
+    responsive: true,
+    displayModeBar: false
+  };
+
+  // Buat grafik
+  Plotly.newPlot('visitorChart', [trace1, trace2], layout, config);
+
+  // Update grafik saat resize window
+  window.addEventListener('resize', function() {
+    Plotly.relayout('visitorChart', {
+      'xaxis.autorange': true,
+      'yaxis.autorange': true
+    });
+  });
+});
