@@ -507,7 +507,7 @@ h6 {
 @media (max-width: 768px) {
   .hero {
     padding-top: 4rem;
-    background-image: url("./image/kelas.jpg");
+    background-image: url("image/kelas.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -1408,3 +1408,84 @@ footer a {
   } /* hide long lists if any */
 }
 
+/* Perbaiki posisi tombol "×" pada daftar komentar -> berada di kanan atas item */
+.messages-list .message-item {
+  display: flex;
+  gap: 0.75rem;
+  align-items: flex-start; /* pastikan konten dan tombol sejajar di atas */
+  padding: 0.75rem 0.9rem;
+  border-bottom: 1px solid rgba(0,0,0,0.04);
+}
+
+.messages-list .message-item .btn-delete-msg {
+  margin-left: auto;        /* dorong tombol ke kanan */
+  align-self: flex-start;   /* tetap di posisi atas item, jangan tengah */
+  height: 34px;
+  width: 34px;
+  padding: 6px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+}
+
+/* kecilkan sedikit di layar sangat kecil supaya tidak memblok teks */
+@media (max-width: 576px) {
+  .messages-list .message-item .btn-delete-msg {
+    height: 30px;
+    width: 30px;
+    padding: 4px;
+  }
+}
+
+/* Scroll reveal basic */
+.reveal {
+  opacity: 0;
+  transform: translateY(18px) scale(0.995);
+  transition: opacity 640ms cubic-bezier(.22,.9,.36,1), transform 640ms cubic-bezier(.22,.9,.36,1);
+  will-change: opacity, transform;
+  visibility: hidden;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  visibility: visible;
+}
+
+/* directional variants */
+.reveal-left  { transform: translateX(-18px) translateY(6px) scale(.995); }
+.reveal-right { transform: translateX(18px) translateY(6px) scale(.995); }
+.reveal-up    { transform: translateY(28px) scale(.995); }
+
+/* when visible reset transforms */
+.reveal-left.visible,
+.reveal-right.visible,
+.reveal-up.visible {
+  transform: none;
+}
+
+/* subtle floating animation for decorative elements */
+@keyframes float-soft {
+  0%   { transform: translateY(0px); }
+  50%  { transform: translateY(-8px); }
+  100% { transform: translateY(0px); }
+}
+.float-anim {
+  animation: float-soft 4.8s ease-in-out infinite;
+}
+
+/* hero parallax helper */
+.hero-parallax {
+  transform: translateZ(0);
+  will-change: transform;
+  transition: transform 220ms linear;
+}
+
+/* ensure smooth native scroll across browsers */
+html { scroll-behavior: smooth; }
+
+/* mobile tweaks: reduce motion for users preferring reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  .reveal,
+  .float-anim { transition: none !important; animation: none !important; }
+}

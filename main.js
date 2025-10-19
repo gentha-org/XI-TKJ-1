@@ -482,4 +482,57 @@ highlights.forEach((highlight) => {
   });
 })();
 
+// ================= Lightweight scroll animations =================
+(function scrollAnimations() {
+  const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (prefersReduced) return;
+
+  // add reveal class to common candidates
+  const selector = [
+    '.card', '.section-header', '.headline', '.struktur-item', '.anggota-card',
+    '.gallery_kiri img', '.gallery_kanan img', '.tugas-list .list-group-item',
+    '.contact-form', '.messages-list .message-item', '.footer_atas'
+  ].join(', ');
+  document.querySelectorAll(selector).forEach(el => {
+    // don't overwrite existing utility classes
+    if (!el.classList.contains('reveal') && !el.classList.contains('float-anim')) {
+      el.classList.add('reveal');
+    }
+  });
+
+  // add float animation to some decorative elements
+  document.querySelectorAll('.hero-image-overlay-1, .hero-image-overlay-2, .brand-icon')
+    .forEach(el => el.classList.add('float-anim', 'hero-parallax'));
+
+  const ioOptions = { root: null, rootMargin: '0px 0px -10% 0px', threshold: 0.12 };
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const el = entry.target;
+      if (entry.isIntersecting) {
+        el.classList.add('visible');
+        // if element is not expected to re-animate, unobserve for performance
+        io.unobserve(el);
+      }
+    });
+  }, ioOptions);
+
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  // simple parallax for hero-right on scroll (lightweight)
+  const heroRight = document.querySelector('.hero-right');
+  if (heroRight) {
+    let latest = 0;
+    function onScroll() {
+      latest = window.scrollY;
+      requestAnimationFrame(() => {
+        const offset = Math.min(60, latest * 0.06); // subtle effect
+        heroRight.style.transform = `translateY(${offset}px)`;
+      });
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    // init position
+    onScroll();
+  }
+})();
+
 
