@@ -507,6 +507,18 @@ h6 {
 @media (max-width: 768px) {
   .hero {
     padding-top: 4rem;
+    background-image: url("image/kelas.jpg");
+    background-size: cover;
+    background-position: center;
+  }
+
+  .hero-content {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .headline-title p {
+    display: none;
   }
 
   .headline-desktop {
@@ -519,7 +531,7 @@ h6 {
 
   .headline-mobile {
     font-size: 2rem !important;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 1rem !important;
   }
 
@@ -1254,6 +1266,10 @@ footer a {
   text-decoration: none;
 }
 
+.footer_bawah {
+  text-align: center;
+}
+
 .sosmed_footer {
   display: flex;
   padding-top: 12px;
@@ -1280,249 +1296,114 @@ footer a {
   transform: scale(1.1);
 }
 
+/* Footer improvements for mobile: cleaner layout and responsive stacking */
 .footer_atas {
   display: flex;
   justify-content: space-between;
-  flex-direction: row;
-  border-bottom: 1px solid #3d5e3b;
-  padding: 12px 32px;
-  width: 100%;
-}
-
-.footer_atas p {
-  font-size: 14px;
-}
-
-.footer_bawah {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 12px 32px;
-}
-
-.nav_footer {
-  display: flex;
-  flex-direction: row;
-  gap: 32px;
-}
-
-.nav_footer a {
-  color: rgb(49, 47, 47);
-  transition: 0.5s;
-}
-
-.nav_footer a:hover {
-  color: var(--color1--);
-  border-bottom: 1px solid #40653e;
-}
-
-.nav_footer h1 {
-  font-size: 16px;
-}
-
-.nav_footer a {
-  font-size: 12px;
-}
-
-.company,
-.support,
-.links,
-.contact_us {
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-}
-
-.contact_us p {
-  display: flex;
-  gap: 8px;
-  font-size: 12px;
-}
-
-.contact_us .bx {
-  display: flex;
-  align-items: center;
-  font-size: 14px;
-  color: var(--color1--);
-}
-
-.contact_us2 {
-  display: none;
-}
-
-.Copyright {
-  font-size: 12px;
-}
-
-.Copyright span {
-  color: var(--color1--);
-}
-
-.copyright_detail a {
-  color: rgb(49, 47, 47);
-  transition: 0.5s;
-}
-
-.copyright_detail a:hover {
-  color: var(--color1--);
-  border-bottom: 1px solid #3d5e3b;
-}
-
-.copyright_detail {
-  display: flex;
-  gap: 12px;
-  font-size: 12px;
-}
-
-/* Tugas CRUD improvements */
-.tugas-list {
-  max-height: 420px;
-  overflow: auto;
-  padding: 0.25rem;
-  border-radius: 6px;
-  background: var(--card-bg, #fff);
-  box-shadow: none;
-}
-
-/* Each task item */
-.tugas-list .list-group-item {
-  display: flex;
-  flex-direction: column;
-  gap: 0.5rem;
-  padding: 0.65rem 0.75rem;
-  border: 0;
-  border-bottom: 1px solid rgba(0,0,0,0.05);
-}
-.tugas-list .list-group-item:last-child {
-  border-bottom: 0;
-}
-
-.tugas-list .fw-bold {
-  font-size: 0.95rem;
-}
-
-.tugas-list .small.text-muted {
-  font-size: 0.78rem;
-}
-
-/* Buttons area inside each item (edit/delete) */
-.tugas-list .btn-edit,
-.tugas-list .btn-delete {
-  width: 36px;
-  height: 36px;
-  padding: 6px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* Form tweaks */
-.tugas-form .form-control-sm {
-  font-size: 0.9rem;
-  padding: 6px 8px;
-}
-
-/* Responsive: make list taller on large screens */
-@media (min-width: 992px) {
-  .tugas-list { max-height: 480px; }
-}
-
-/* Small screens: stack spacing */
-@media (max-width: 767.98px) {
-  .tugas-list { max-height: 360px; }
-  .tugas-form .form-control-sm,
-  .tugas-form .form-label {
-    font-size: 0.88rem;
-  }
-}
-
-/* subtle hover */
-.tugas-list .list-group-item:hover {
-  background: rgba(0,0,0,0.02);
-}
-
-/* ensure collapse animation doesn't jump layout */
-.collapse.d-lg-block {
-  display: block !important;
-}
-
-/* Contact messages list */
-.messages-list {
-  max-height: 420px;
-  overflow: auto;
-  padding: 0.25rem;
-  border-radius: 8px;
-  background: #fff;
-  border: 1px solid rgba(15,23,42,0.04);
-}
-
-.messages-list .message-item {
-  padding: 0.75rem 0.9rem;
-  border-bottom: 1px solid rgba(0,0,0,0.04);
-  display: flex;
-  gap: 0.75rem;
+  gap: 24px;
+  padding: 38px 82px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.06);
   align-items: flex-start;
 }
 
-.messages-list .message-item:last-child {
-  border-bottom: 0;
+.title_footer {
+  max-width: 320px;
 }
 
-.messages-list .message-meta {
-  font-size: 0.78rem;
-  color: #6b7280;
+.title_footer h1 {
+  margin: 0 0 8px 0;
+  font-size: 1.25rem;
 }
 
-.messages-list .message-body {
-  font-size: 0.95rem;
-  color: #0f172a;
-  white-space: pre-wrap;
-}
-
-/* small delete button in each message */
-.messages-list .btn-delete-msg {
-  margin-left: auto;
-  height: 34px;
-  width: 34px;
-  padding: 6px;
-}
-
-/* Centered contact success alert */
-.contact-alert {
-  position: fixed;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%) scale(0.98);
-  z-index: 1080;
-  min-width: 260px;
-  max-width: calc(100% - 48px);
-  background: rgba(255,255,255,0.98);
-  border-radius: 12px;
-  box-shadow: 0 12px 40px rgba(15,23,42,0.12);
-  padding: 18px 20px;
-  display: flex;
+.sosmed_footer a {
+  display: inline-flex;
   align-items: center;
   justify-content: center;
-  transition: all 220ms ease;
+  width: 36px;
+  height: 36px;
+  border-radius: 8px;
+  background: #fff;
+  margin-right: 8px;
+  color: #333;
+  box-shadow: 0 6px 18px rgba(112, 114, 255, 0.06);
+}
+.sosmed_footer a .bx {
+  font-size: 1.1rem;
 }
 
-.contact-alert.show {
-  transform: translate(-50%, -50%) scale(1);
-  opacity: 1;
+/* Footer columns */
+.nav_footer {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+}
+.footer-column h1 {
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+.footer-column a,
+.contact_us p {
+  display: block;
+  color: #2b2b2b;
+  text-decoration: none;
+  font-size: 13px;
+  margin-bottom: 6px;
 }
 
-/* alert content styling */
-.contact-alert .alert-content {
-  text-align: center;
-}
-
-@media (max-width: 768px) {
-  .messages-list {
-    max-height: 320px;
+/* Mobile-specific footer layout */
+@media (max-width: 576px) {
+  .footer_atas {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 18px 16px;
+    gap: 18px;
+    border-bottom: 0;
   }
 
-  .contact-alert {
-    min-width: 220px;
-    padding: 14px 16px;
+  .title_footer {
+    max-width: 100%;
   }
+
+  .nav_footer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px 16px;
+    align-items: start;
+  }
+
+  .footer-column {
+    text-align: center;
+  }
+
+  .footer-column h1 {
+    font-size: 13px;
+    margin-bottom: 6px;
+  }
+
+  .sosmed_footer {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 6px;
+  }
+
+  .footer_bawah {
+    flex-direction: column;
+    gap: 8px;
+    padding: 12px 16px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .copyright_detail {
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+
+  /* reduce visual clutter on very small screens */
+  .footer-column a:nth-child(n + 6) {
+    display: none;
+  } /* hide long lists if any */
 }
