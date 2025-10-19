@@ -507,7 +507,7 @@ h6 {
 @media (max-width: 768px) {
   .hero {
     padding-top: 4rem;
-    background-image: url("image/kelas.jpg");
+    background-image: url("./image/kelas.jpg");
     background-size: cover;
     background-position: center;
   }
@@ -1407,3 +1407,4 @@ footer a {
     display: none;
   } /* hide long lists if any */
 }
+
