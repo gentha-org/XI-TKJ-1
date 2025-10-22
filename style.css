@@ -507,7 +507,7 @@ h6 {
 @media (max-width: 768px) {
   .hero {
     padding-top: 4rem;
-    background-image: url("image/kelas.jpg");
+    background-image: url("image/LOGO\ NEW.webp");
     background-size: cover;
     background-position: center;
   }
@@ -551,7 +551,7 @@ h6 {
 /* struktur kelas */
 .struktur-kelas-baru {
   padding: 80px 0;
-  background: rgb(192, 192, 234);
+  background:  rgb(222, 222, 222);
   text-align: center;
 }
 
@@ -699,9 +699,9 @@ h6 {
   }
 
   .struktur-item {
-    width: 100%; /* ubah ke fluid width */
-    max-width: 160px; /* batasi lebar maksimal */
-    height: auto; /* biarkan tinggi menyesuaikan konten */
+    width: 100%; 
+    max-width: 160px; 
+    height: auto; 
     padding: 0.8rem;
     margin: 0 auto;
   }
@@ -1412,14 +1412,14 @@ footer a {
 .messages-list .message-item {
   display: flex;
   gap: 0.75rem;
-  align-items: flex-start; /* pastikan konten dan tombol sejajar di atas */
+  align-items: flex-start;
   padding: 0.75rem 0.9rem;
   border-bottom: 1px solid rgba(0,0,0,0.04);
 }
 
 .messages-list .message-item .btn-delete-msg {
-  margin-left: auto;        /* dorong tombol ke kanan */
-  align-self: flex-start;   /* tetap di posisi atas item, jangan tengah */
+  margin-left: auto;       
+  align-self: flex-start;  
   height: 34px;
   width: 34px;
   padding: 6px;
